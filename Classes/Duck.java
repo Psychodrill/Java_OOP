@@ -3,35 +3,40 @@ package Classes;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Cat extends Animal {
+public class Duck extends Animal{
 
-    private int legsCount;
-    public Cat(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner, int legsCount) {
+    public Duck(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner) {
         super(name, birthDate, vaccinations, illness, owner);
-        this.legsCount=legsCount;
         //TODO Auto-generated constructor stub
     }
     @Override
     protected void wakeup() {
-        System.out.println("Cat wakes up");
+        System.out.println("Duck wakes up");
     }
     @Override
     protected void eat() {
-        System.out.println("Cat ate");
+        System.out.println("Duck ate");
     }
     @Override
     protected void play() {
-        System.out.println("Cat playing");
+        System.out.println("Duck playing");
     }
     @Override
     protected void sleep() {
-        System.out.println("Cat sleeping");
+        System.out.println("Duck sleeping");
     }
     @Override
     protected void go() {
-        System.out.println("Cat walking");
+        System.out.println("Duck walking");
     }
-
+    @Override
+    protected void fly() {
+        System.out.println("Duck flying");
+    }
+    @Override
+    protected void swim() {
+        System.out.println("Duck swimming");
+    }
     @Override
     public void lifeCycle() {
         wakeup();
@@ -40,6 +45,9 @@ public class Cat extends Animal {
         sleep();
         wakeup();
         go();
+        fly();
+        eat();
+        swim();
         sleep();
     }
     

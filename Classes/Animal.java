@@ -33,26 +33,40 @@ public class Animal {
         return owner;
     } 
 
-    private void eat(){
+    protected void eat(){
         System.out.println("Animal ate");
     }
-    private void sleep(){
+    protected void sleep(){
         System.out.println("Animal sleeping");
     }
-    private void play(){
+    protected void play(){
         System.out.println("Animal playing");
     }
+    protected void go(){
+        System.out.println("Animal walking");
+    }
+    protected void fly(){
+        System.out.println("Animal flying");
+    }
+    protected void swim(){
+        System.out.println("Animal swimming");
+    }
 
-    private void wakeup(){
+    protected void wakeup(){
         System.out.println("Animal wakes up");
     }
-    private void wakeup(LocalDate time){
+    protected void wakeup(LocalDate time){
         System.out.println(String.format("Animal had woken up in %s", time));
     }
-    public void lifeCycle(){
+    protected void lifeCycle(){
         wakeup();
         eat();
         play();
+        sleep();
+        wakeup();
+        go();
+        fly();
+        swim();
         sleep();
     }
 

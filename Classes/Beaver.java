@@ -3,44 +3,40 @@ package Classes;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Cat extends Animal {
+public class Beaver extends Animal{
 
-    private int legsCount;
-    public Cat(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner, int legsCount) {
+    public Beaver(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner) {
         super(name, birthDate, vaccinations, illness, owner);
-        this.legsCount=legsCount;
         //TODO Auto-generated constructor stub
     }
     @Override
     protected void wakeup() {
-        System.out.println("Cat wakes up");
+        System.out.println("Beaver wakes up");
     }
     @Override
     protected void eat() {
-        System.out.println("Cat ate");
-    }
-    @Override
-    protected void play() {
-        System.out.println("Cat playing");
+        System.out.println("Beaver ate");
     }
     @Override
     protected void sleep() {
-        System.out.println("Cat sleeping");
+        System.out.println("Beaver slepping");
     }
     @Override
     protected void go() {
-        System.out.println("Cat walking");
+        System.out.println("Beaver walking");
     }
-
+    @Override
+    protected void swim() {
+        System.out.println("Beaver swimming");
+    }
     @Override
     public void lifeCycle() {
         wakeup();
         eat();
-        play();
         sleep();
         wakeup();
         go();
+        swim();
         sleep();
     }
-    
 }
