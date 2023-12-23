@@ -9,6 +9,7 @@ public class Animal {
     protected List<String> vaccinations;
     protected String illness;
     protected String owner;
+    protected String type;
     
     public Animal(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner){
         this.name=name;
@@ -16,6 +17,7 @@ public class Animal {
         this.vaccinations=vaccinations;
         this.illness=illness;
         this.owner=owner;
+        this.type = getClass().getSimpleName();
     }
     public String getName(){
         return name;
@@ -33,42 +35,42 @@ public class Animal {
         return owner;
     } 
 
-    protected void eat(){
-        System.out.println("Animal ate");
+    public void eat(){
+        System.out.printf("%s %s ate", type, name);
     }
-    protected void sleep(){
-        System.out.println("Animal sleeping");
+    public void sleep(){
+        System.out.printf("%s %s sleeping", type, name);
     }
-    protected void play(){
-        System.out.println("Animal playing");
+    public void play(){
+        System.out.printf("%s %s playing", type, name);
     }
-    protected void go(){
-        System.out.println("Animal walking");
-    }
-    protected void fly(){
-        System.out.println("Animal flying");
-    }
-    protected void swim(){
-        System.out.println("Animal swimming");
-    }
+    // protected void go(){
+    //     System.out.printf("%s %s walking",type, name);
+    // }
+    // protected void fly(){
+    //     System.out.printf("%s %s flying", type, name);
+    // }
+    // protected void swim(){
+    //     System.out.printf("%s %s swimming", type, name);
+    // }
 
-    protected void wakeup(){
-        System.out.println("Animal wakes up");
+    public void wakeup(){
+        System.out.printf("%s %s wakes up", type, name);
     }
-    protected void wakeup(LocalDate time){
+    public void wakeup(LocalDate time){
         System.out.println(String.format("Animal had woken up in %s", time));
     }
-    protected void lifeCycle(){
-        wakeup();
-        eat();
-        play();
-        sleep();
-        wakeup();
-        go();
-        fly();
-        swim();
-        sleep();
-    }
+    // protected void lifeCycle(){
+    //     wakeup();
+    //     eat();
+    //     play();
+    //     sleep();
+    //     wakeup();
+    //     go();
+    //     fly();
+    //     swim();
+    //     sleep();
+    // }
 
     @Override
     public String toString(){

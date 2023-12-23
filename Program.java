@@ -1,3 +1,4 @@
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -17,21 +18,20 @@ public class Program{
         Duck duck = new Duck("Adolf", LocalDate.of(2016,5,12),
                              new ArrayList<>(), "Polyomavirus", "Boss");
 
-
         animals.add(cat);
         animals.add(eagle);
         animals.add(beaver);
         animals.add(duck);
-        System.out.println(cat);
-        cat.lifeCycle();
-        System.out.println(animals);
-        for(var entry : animals){
-            //entry.lifeCycle() dont access due to protected in Animal class
-        }
-        cat.lifeCycle();
-        eagle.lifeCycle();
-        beaver.lifeCycle();
-        duck.lifeCycle();
+        // System.out.println(cat);
+        // cat.lifeCycle(); 
+        // System.out.println(animals);
+        // for(var entry : animals){
+        //     //entry.lifeCycle() dont access due to protected in Animal class
+        // }
+        // // cat.lifeCycle();
+        // // eagle.lifeCycle();
+        // // beaver.lifeCycle();
+        // // duck.lifeCycle();
 
     }
 }

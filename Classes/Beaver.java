@@ -3,40 +3,23 @@ package Classes;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Beaver extends Animal{
+public class Beaver extends Animal implements Goable,Swimable{
 
     public Beaver(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner) {
         super(name, birthDate, vaccinations, illness, owner);
-        //TODO Auto-generated constructor stub
+
     }
+
     @Override
-    protected void wakeup() {
-        System.out.println("Beaver wakes up");
+    public double swim() {
+       
+        return 2;
     }
+
     @Override
-    protected void eat() {
-        System.out.println("Beaver ate");
+    public double run() {
+       
+        return 4;
     }
-    @Override
-    protected void sleep() {
-        System.out.println("Beaver slepping");
-    }
-    @Override
-    protected void go() {
-        System.out.println("Beaver walking");
-    }
-    @Override
-    protected void swim() {
-        System.out.println("Beaver swimming");
-    }
-    @Override
-    public void lifeCycle() {
-        wakeup();
-        eat();
-        sleep();
-        wakeup();
-        go();
-        swim();
-        sleep();
-    }
+    
 }
