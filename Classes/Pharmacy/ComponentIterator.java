@@ -1,6 +1,5 @@
 package Classes.Pharmacy;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ComponentIterator implements Iterator<Component> {

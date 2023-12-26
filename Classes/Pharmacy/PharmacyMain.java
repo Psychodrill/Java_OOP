@@ -1,10 +1,10 @@
 package Classes.Pharmacy;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class PharmacyMain {
 
@@ -32,7 +32,8 @@ public class PharmacyMain {
         //     System.out.println(com);
         // }
 
-        List<Component> components = new ArrayList<Component>();
+        
+        ArrayList<Component> components = new ArrayList<Component>();
         components.add(ultramek);
         components.add(chlorhexidine);
         components.add(novocaine);
@@ -40,6 +41,34 @@ public class PharmacyMain {
         Collections.sort(components);
 
         System.out.println(components);
+
+        //Homework below
+
+        IterablePharmacy itPharmacy1 = new IterablePharmacy();
+        IterablePharmacy itPharmacy2 = new IterablePharmacy();
+        IterablePharmacy itPharmacy3 = new IterablePharmacy();
+        
+        Component [] drugs3 = {ultramek,chlorhexidine,novocaine};
+        Component [] drugs2 = {novocaine,chlorhexidine, diclacox};
+
+        itPharmacy1.addComponents(drugs3);
+        itPharmacy2.addComponents(drugs3);
+        itPharmacy3.addComponents(drugs2);
+        
+        Set<IterablePharmacy> result = new HashSet<IterablePharmacy>();
+        result.add(itPharmacy1);
+        result.add(itPharmacy2);
+        result.add(itPharmacy3);
+
+        System.out.println(result.size());
+        ArrayList<IterablePharmacy> pharmacyArList= new ArrayList<IterablePharmacy>(result);
+        System.out.println(result);
+        Collections.sort(pharmacyArList);
+        System.out.println(pharmacyArList);
+
+     
+
+        
 
         
     }

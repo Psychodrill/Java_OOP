@@ -12,6 +12,10 @@ public class Component implements Comparable<Component>{
     this.power=power;
     }
 
+    public Integer getPower(){
+        return this.power;
+    }
+
     @Override
     public String toString() {
         return "Component{"+ "name='"+name+'\''+
@@ -28,6 +32,8 @@ public class Component implements Comparable<Component>{
         return Integer.compare(this.power, o.power);
         
     }
+
+
 
     
 }
